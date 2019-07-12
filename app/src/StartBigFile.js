@@ -17,13 +17,19 @@ export function Page ( {addA, onInputA, addB, onInputB, addC, onInputC}) {
 
 function calcQuadratic ( a, b, c ) {
     if (a === 0) {
-        const x = Math.round((-c/b)*100)/100
+        const x = Math.round(Math.abs(-c/b)*100)/100
         return x
     }
 
     else if (b === 0) {
         const x = Math.round((Math.sqrt(Math.abs(c/a)))*100)/100
         const roots = [-x, x]
+        return roots
+    }
+
+    else if (c === 0) {
+        const x = Math.round((-c/b)*100)/100
+        const roots = [0, x]
         return roots
     }
 
