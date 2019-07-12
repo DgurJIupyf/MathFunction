@@ -1,8 +1,17 @@
 import React from "react";
 
-export function Page () {
+
+
+export function Page ( {addA, onInputA, addB, onInputB, addC, onInputC}) {
+    console.log(addA)
     return (<div>
-        {calcQuadratic(1, 0, -4)}
+        <input onChange={onInputA} className="Input"></input>
+        <span>x^2 </span>
+        <input onChange={onInputB} className="Input"></input>
+        <span>x </span>
+        <input onChange={onInputC} className="Input"></input>
+        <span> = </span>
+        <span>{calcQuadratic(addA, addB, addC)}</span>
     </div>)
 }
 

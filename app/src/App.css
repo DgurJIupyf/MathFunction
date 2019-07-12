@@ -31,3 +31,22 @@
     transform: rotate(360deg);
   }
 }
+
+.Input {
+  background-color: #282c34;
+  width: calc(20px + 2vmin);
+  border-style:solid;
+  border-width: 0,01;
+  border-color: #454952;
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
+
+.Input:hover {
+  border-color: #808288;
+}
+
+.Input:focus {
+  border-color: #808288;
+  outline: none;
+}
