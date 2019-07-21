@@ -5,19 +5,21 @@ import React from "react";
 export function Page ( {addA, onInputA, addB, onInputB, addC, onInputC}) {
     console.log(addA)
     return (<div>
-        <input onChange={onInputA} className="Input"></input>
-        <span>x^2 </span>
-        <input onChange={onInputB} className="Input"></input>
-        <span>x </span>
-        <input onChange={onInputC} className="Input"></input>
-        <span> = </span>
-        <span>{calcQuadratic(addA, addB, addC)}</span>
-    </div>)
+                <input onChange={onInputA} className="Input"></input>
+                <span>x^2 </span>
+                <input onChange={onInputB} className="Input"></input>
+                <span>x </span>
+                <input onChange={onInputC} className="Input"></input>
+                <span> = </span>
+                <span>{calcQuadratic(addA, addB, addC)}</span>
+             </div>)
 }
 
 function calcQuadratic ( a, b, c ) {
+    console.log(a,b,c)
     if (a === 0) {
-        const x = Math.round(Math.abs(-c/b)*100)/100
+        const x = Math.round((-c/b)*100)/100
+        console.log(x)
         return x
     }
 
@@ -28,12 +30,12 @@ function calcQuadratic ( a, b, c ) {
     }
 
     else if (c === 0) {
-        const x = Math.round((-c/b)*100)/100
+        const x = Math.round((-a/b)*100)/100
         const roots = [0, x]
         return roots
     }
 
-    const Dis = b*b -4*a*c 
+    else {const Dis = b*b -4*a*c 
     console.log(Dis)
     if (Number.isNaN(Math.sqrt(Dis)))
         return "Введены неверные значения при которых дискриминант отрицательный"
@@ -46,5 +48,5 @@ function calcQuadratic ( a, b, c ) {
         console.log (x1, x2, sqrtDis, sqrtDis/(2*a), 2*a)
 
         return roots
-    }
+    }}
 }

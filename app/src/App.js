@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import {ReadyPanel} from "./components/NewPanel.js";
 import {Page} from "./StartBigFile";
+
 
 function App() {
   const [a, setA] = useState();
@@ -11,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <ReadyPanel />
         <Page
           addA = {a}
           onInputA = {event => setA(event.target.value)}
