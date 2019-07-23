@@ -17,36 +17,53 @@ export function Page ( {addA, onInputA, addB, onInputB, addC, onInputC}) {
 
 function calcQuadratic ( a, b, c ) {
     console.log(a,b,c)
-    if (a === 0) {
+    if ((a === "0")&(b !== "0")&(c !== "0")) {
         const x = Math.round((-c/b)*100)/100
         console.log(x)
         return x
     }
 
-    else if (b === 0) {
+    else if ((a === "0")&(b === "0")&(c !== "0")) {
+        return "Нет корней"
+    }
+
+    else if ((a === "0")&(b === "0")&(c === "0")) {
+        return "Нет корней"
+    }
+
+    else if ((a !== "0")&(b === "0")&(c === "0")) {
+        return 0
+    }
+
+    else if ((a === "0")&(b !== "0")&(c === "0")) {
+        return 0
+    }
+    
+    else if ((a !== "0")&(b === "0")&(c !== "0")) {
         const x = Math.round((Math.sqrt(Math.abs(c/a)))*100)/100
         const roots = [-x, x]
         return roots
     }
 
-    else if (c === 0) {
+    else if ((a !== "0")&(b !== "0")&(c === "0")) {
         const x = Math.round((-a/b)*100)/100
         const roots = [0, x]
         return roots
     }
 
-    else {const Dis = b*b -4*a*c 
-    console.log(Dis)
-    if (Number.isNaN(Math.sqrt(Dis)))
-        return "Введены неверные значения при которых дискриминант отрицательный"
     else {
-        const sqrtDis = Math.sqrt(Dis)
-        const x1 = Math.round(((-b - sqrtDis)/(2*a))*100)/100
-        const x2 = Math.round(((-b + sqrtDis)/(2*a))*100)/100
-        const roots = [x1, x2]
+        const Dis = b*b -4*a*c 
+        console.log(Dis)
+        if (Number.isNaN(Math.sqrt(Dis)))
+            return "Нет корней"
+        else {
+            const sqrtDis = Math.sqrt(Dis)
+            const x1 = Math.round(((-b - sqrtDis)/(2*a))*100)/100
+            const x2 = Math.round(((-b + sqrtDis)/(2*a))*100)/100
+            const roots = [x1, x2]
 
-        console.log (x1, x2, sqrtDis, sqrtDis/(2*a), 2*a)
+            console.log (x1, x2, sqrtDis, sqrtDis/(2*a), 2*a)
 
-        return roots
+            return roots
     }}
 }
