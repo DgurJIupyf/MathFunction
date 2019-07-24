@@ -1,0 +1,15 @@
+.component {
+    float: right;
+}
+
+.bottom {
+    text-decoration: underline;
+}
+
+.top {
+     text-decoration: overline;
+}
+
+.down {
+    line-height: 90%;
+}

@@ -1,6 +1,18 @@
 import React from "react";
 
-
+function Discriminant () {
+    return (<div className="component">
+            <span className="bottom"> 
+                <span>23</span>
+                &radic; 
+                <span className="top" >11</span> 
+                &lsquo;
+                <span> + 23</span> 
+            </span> 
+            <br />
+            <span className="down">  43</span> 
+        </div>)
+}
 
 export function Page ( {addA, onInputA, addB, onInputB, addC, onInputC}) {
     console.log(addA)
@@ -12,6 +24,7 @@ export function Page ( {addA, onInputA, addB, onInputB, addC, onInputC}) {
                 <input onChange={onInputC} className="Input"></input>
                 <span> = </span>
                 <span>{calcQuadratic(addA, addB, addC)}</span>
+                <Discriminant />
              </div>)
 }
 
