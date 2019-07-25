@@ -1,7 +1,8 @@
 import React from "react";
 
 function Discriminant () {
-    return (<div className="component">
+    return (
+        <div className="component">
             <span className="bottom"> 
                 <span>23</span>
                 &radic; 
@@ -11,7 +12,8 @@ function Discriminant () {
             </span> 
             <br />
             <span className="down">  43</span> 
-        </div>)
+        </div>
+    )
 }
 
 export function Page ( {addA, onInputA, addB, onInputB, addC, onInputC}) {

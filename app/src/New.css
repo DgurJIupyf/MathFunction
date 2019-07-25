@@ -1,9 +1,10 @@
 .component {
     float: right;
+    
 }
 
 .bottom {
-    text-decoration: underline;
+    border-bottom: 1.5px solid white;
 }
 
 .top {
@@ -11,5 +12,5 @@
 }
 
 .down {
-    line-height: 90%;
+    padding-top: 100px;
 }
