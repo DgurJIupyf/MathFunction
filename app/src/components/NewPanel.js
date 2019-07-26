@@ -13,6 +13,14 @@ export function ReadyPanel () {
     )
 }
 
+export function ReadyPanel2 () {
+    return (
+        <div className="twopanel">
+            <div> fasfasf </div>
+        </div>
+    )
+}
+
 export function createNewPanel () {
     return (
         <div>

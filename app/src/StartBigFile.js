@@ -1,10 +1,10 @@
 import React from "react";
 
-function Discriminant () {
+function Roots () {
     return (
         <div className="component">
             <span className="bottom"> 
-                <span>23</span>
+                <span> 23  </span>
                 &radic; 
                 <span className="top" >11</span> 
                 &lsquo;
@@ -26,7 +26,7 @@ export function Page ( {addA, onInputA, addB, onInputB, addC, onInputC}) {
                 <input onChange={onInputC} className="Input"></input>
                 <span> = </span>
                 <span>{calcQuadratic(addA, addB, addC)}</span>
-                <Discriminant />
+                <Roots />
              </div>)
 }
 

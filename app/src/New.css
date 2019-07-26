@@ -1,6 +1,12 @@
 .component {
     float: right;
-    
+}
+
+.head {
+    padding-top: 2%;
+    text-align: center;
+    font-size: calc(12px + 2vmin);
+    color: white;
 }
 
 .bottom {
@@ -12,5 +18,5 @@
 }
 
 .down {
-    padding-top: 100px;
+    padding-top: 0px;
 }

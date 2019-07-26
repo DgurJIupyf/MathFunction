@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "./New.css";
-import {ReadyPanel} from "./components/NewPanel.js";
+import { ReadyPanel, ReadyPanel2 } from "./components/NewPanel.js";
 import {Page} from "./StartBigFile";
 
 
@@ -12,9 +12,14 @@ function App() {
   const [c, setC] = useState();
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="AppTop">
+      <div className="head"> Сайт для решения всякой математическои или физической ерунды, ну может и химической</div>
+      <div>
         <ReadyPanel />
+        <ReadyPanel2 />
+      </div>
+      <div className="App">
+      <header className="App-header">
         <Page
           addA = {a}
           onInputA = {event => setA(event.target.value)}
@@ -37,6 +42,7 @@ function App() {
           Learn React
         </a>
       </header>
+      </div>
     </div>
   );
 }
