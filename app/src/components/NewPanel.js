@@ -7,7 +7,7 @@ export function ReadyPanel () {
     return  (
         <div className="create">
             <div>saf {a}
-            asfasfdfd
+                asfasfdfd
             </div>
         </div>
     )
