@@ -1,17 +1,16 @@
 import React from "react";
+import "./StartBigFile.css";
 
 function Roots () {
     return (
-        <div className="component">
-            <span className="bottom"> 
-                <span> 23  </span>
-                &radic; 
-                <span className="top" >11</span> 
-                &lsquo;
-                <span> + 23</span> 
-            </span> 
-            <br />
-            <span className="down">  43</span> 
+        <div className="roots">
+            <div className="root"> 
+                <div>23 </div>
+                <div className="root-radic" >&radic; </div>
+                <div className="root-top" >11</div>
+                <div> + 23</div> 
+            </div>
+            <div className="down">43</div> 
         </div>
     )
 }

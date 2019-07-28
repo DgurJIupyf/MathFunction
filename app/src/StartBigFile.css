@@ -1,5 +1,6 @@
-.component {
+.roots {
     float: right;
+    margin: 3px;
 }
 
 .head {
@@ -9,11 +10,21 @@
     color: white;
 }
 
-.bottom {
+.root {
+    display: flex;
+    margin-bottom: 3px;
     border-bottom: 1.5px solid white;
+    padding-bottom: 3px;
 }
 
-.top {
+.root-radic {
+    margin-top: -7px;
+    margin-right: -2px;
+
+    font-weight: 500;
+}
+
+.root-top {
      text-decoration: overline;
 }
 
