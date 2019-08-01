@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import "./New.css";
 import { ReadyPanel, ReadyPanel2 } from "./components/NewPanel.js";
 import {Page} from "./StartBigFile";
 
